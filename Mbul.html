@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat satu-satunya stevi si mbul!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: #ffe4f3;
+            margin: 0;
+            padding: 0;
+            color: #555;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            color: white;
+            padding: 20px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #ff6f91;
+        }
+        p {
+            font-size: 1rem;
+        }
+        .countdown {
+            font-size: 1.5rem;
+            color: #ff9a9e;
+            font-weight: bold;
+        }
+        textarea {
+            width: 90%;
+            height: 120px;
+            border: 2px solid #ff9a9e;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+        textarea:focus {
+            box-shadow: 0 0 10px #ff6f91;
+        }
+        audio {
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hi bul ini gw mbul jatinangor! </h1>
+        <p>gw di sini buat website ini khusus buat lo nih, biar lo bisa semangat UASnya, semoga suka ya ;)!</p>
+    </header>
+
+    <section>
+        <h2>🌟 Motivasi</h2>
+        <p>"hidup hanya sekali, usahalah sekeras-kerasnya, karena penyesalan dalam hidup akan susah dilupakan." -rava- </p>
+    </section>
+
+    <section>
+        <h2>⏳ Countdown to Liburr Prasmul (akhem ultah gw jg loh)</h2>
+        <p class="countdown" id="countdown"></p>
+    </section>
+
+    <section>
+        <h2>📝 Write Your Study Notes</h2>
+        <p>Keep track of your tasks or write something to stay focused:</p>
+        <textarea placeholder="Write your notes here..."></textarea>
+    </section>
+
+    <section>
+        <h2>🎶 santai dulu bosq</h2>
+        <p>gw ga tau apakah lo suka lagu ini, tp lagu ini selalu membuat gw semangat, semoga bisa nyemangatin lo ya:</p>
+        <audio controls>
+            <source src="Tiara Andini Arsy Widianto – Cantik (Official Music Video).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <footer>
+        <p>semoga suka ya bul, jgn lupa senyum ya, jgn stress teros, kamu pasti bisa melewati ini kok!</p>
+    </footer>
+
+    <script>
+        // Countdown to final exam date
+        const examDate = new Date("2024-12-07"); // Change this to her actual exam date
+        const countdownElement = document.getElementById("countdown");
+
+        function updateCountdown() {
+            const now = new Date();
+            const diff = examDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            countdownElement.textContent = `${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
